@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { FaTelegramPlane,FaLinkedinIn ,FaGithub} from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
@@ -63,14 +65,59 @@ export default function AboutMe() {
                 <p className="mt-1 font-medium">Debre Birhan, Ethiopia</p>
               </div>
               <div className="bg-white p-4 rounded-md border">
-                <p className="text-gray-500">Follow</p>
-                <div className="flex gap-4 mt-2 text-xl text-[#C33235]">
-                  <a href="https://t.me/yourTelegram" title="Telegram">📨</a>
-                  <a href="https://github.com/yourusername" title="GitHub">🐱</a>
-                  <a href="https://linkedin.com/in/yourusername" title="LinkedIn">💼</a>
-                  <a href="https://twitter.com/yourusername" title="Twitter">🐦</a>
-                </div>
-              </div>
+  <p className="text-gray-500">Follow</p>
+  <div className="flex gap-4 mt-2 text-[#C33235] text-xl">
+    {/* Telegram */}
+    <Link
+      href="https://t.me/yourTelegramUsername"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Telegram"
+      className="hover:text-red-600 transition"
+    >
+      <FaTelegramPlane />
+    </Link>
+
+    {/* LinkedIn */}
+    <Link
+      href="https://linkedin.com/in/yourLinkedInUsername"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="LinkedIn"
+      className="hover:text-red-600 transition"
+    >
+      <FaLinkedinIn />
+    </Link>
+
+    {/* GitHub */}
+    <Link
+      href="https://github.com/yourGitHubUsername"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="GitHub"
+      className="hover:text-red-600 transition"
+    >
+      <FaGithub/>
+    </Link>
+
+    {/* Email */}
+    <Link
+      href="mailto:mierafabebe12@gmail.com"
+      title="Email"
+      className="hover:text-red-600 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-5 h-5"
+      >
+        <path d="M4 4h16c1.1 0 2 .9 2 2v1.2l-10 6.2-10-6.2V6c0-1.1.9-2 2-2zm16 3.4v10.6c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V7.4l10 6.2 10-6.2z" />
+      </svg>
+    </Link>
+  </div>
+</div>
+
             </div>
           </div>
         )}
