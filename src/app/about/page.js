@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FaTelegramPlane, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -15,21 +14,10 @@ import tailwindIcon from '../../../public/tailwind.webp';
 import nodeIcon from '../../../public/node.webp';
 import mongoIcon from '../../../public/mongo.jpg';
 import gitIcon from '../../../public/git.webp';
+import flutterIcon from '../../../public/flutter.webp'
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
-
-  const skillData = [
-    { name: 'HTML', img: htmlIcon },
-    { name: 'CSS', img: cssIcon },
-    { name: 'JavaScript', img: jsIcon },
-    { name: 'React', img: reactIcon },
-    { name: 'Next.js', img: nextIcon },
-    { name: 'Tailwind', img: tailwindIcon },
-    { name: 'Node.js', img: nodeIcon },
-    { name: 'MongoDB', img: mongoIcon },
-    { name: 'Git', img: gitIcon },
-  ];
 
   return (
     <main className="min-h-screen bg-white text-gray-900 px-6 md:px-20 pt-32 pb-16">
@@ -105,6 +93,7 @@ export default function AboutMe() {
                     target="_blank"
                     rel="noopener noreferrer"
                     title="LinkedIn"
+                    className="hover:text-red-600 transition"
                   >
                     <FaLinkedinIn />
                   </Link>
@@ -113,12 +102,14 @@ export default function AboutMe() {
                     target="_blank"
                     rel="noopener noreferrer"
                     title="GitHub"
+                    className="hover:text-red-600 transition"
                   >
                     <FaGithub />
                   </Link>
                   <Link
                     href="mailto:mierafabebe12@gmail.com"
                     title="Email"
+                    className="hover:text-red-600 transition"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -136,62 +127,106 @@ export default function AboutMe() {
         )}
 
         {activeTab === 'education' && (
-          <div className="bg-[#f8f8f8] rounded-xl p-8 shadow-md">
-            <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
-              Education
-            </h3>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
-              <li>
-                BSc in Software Engineering - Debre Birhan University (Expected
-                2026)
-              </li>
-              <li>Frontend Mentorship - Self-learning via online platforms</li>
-              <li>React Native Bootcamp - Remote training (2024)</li>
-            </ul>
-          </div>
-        )}
+  <div className="py-10 md:py-14 border-t border-b border-gray-200">
+    <h3 className="text-3xl font-bold text-[#C33235] mb-6">Education</h3>
+    <div className="space-y-6">
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          BSc in Software Engineering
+        </h4>
+        <p className="text-sm text-gray-500">
+          Debre Birhan University · Expected 2026
+        </p>
+      </div>
 
-        {activeTab === 'experience' && (
-          <div className="bg-[#f8f8f8] rounded-xl p-8 shadow-md">
-            <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
-              Experience
-            </h3>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
-              <li>Frontend Intern at Prodigy InfoTech (2024)</li>
-              <li>
-                Built a Language Learning App using React Native + Node.js
-              </li>
-              <li>
-                Contributed to multiple freelance projects — portfolio, blogs,
-                admin dashboards
-              </li>
-            </ul>
-          </div>
-        )}
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          Frontend Mentorship
+        </h4>
+        <p className="text-sm text-gray-500">
+          Self-taught via online platforms (YouTube, docs, projects)
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          React Native Bootcamp
+        </h4>
+        <p className="text-sm text-gray-500">Remote Training · 2024</p>
+      </div>
+    </div>
+  </div>
+)}
+
+{activeTab === 'experience' && (
+  <div className="py-10 md:py-14 border-t border-b border-[#C33235]">
+    <h3 className="text-3xl font-bold text-[#C33235] mb-6">Experience</h3>
+    <div className="space-y-6">
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          Frontend Intern at Prodigy InfoTech
+        </h4>
+        <p className="text-sm text-gray-500">March 2024 – Present</p>
+        <p className="mt-2 text-gray-700">
+          Built interactive web interfaces, landing pages, and contributed to
+          internal tools. Focused on responsive layout and animations.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          Language Learning App (React Native + Node.js)
+        </h4>
+        <p className="text-sm text-gray-500">Personal Project · 2024</p>
+        <p className="mt-2 text-gray-700">
+          Designed and developed an educational mobile app with offline
+          capabilities, user goals, and payment integration.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800">
+          Freelance Projects (Web & Admin Dashboards)
+        </h4>
+        <p className="text-sm text-gray-500">Remote · 2023 – 2024</p>
+        <p className="mt-2 text-gray-700">
+          Delivered custom portfolio websites, blogs, and admin panels for
+          clients using React, Tailwind, and Next.js.
+        </p>
+      </div>
+    </div>
+  </div>
+)}
+
       </section>
 
-      {/* Animated Skills Section (100% width, with framer-motion) */}
-      <section className="w-full bg-[#f9f8fe] py-20 mt-20">
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto px-6"
-        >
-          <h3 className="text-3xl font-bold text-center text-[#C33235] mb-10">
-            Skills
-          </h3>
+      {/* Animated Skills Section */}
+       <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">
+          Skills
+        </h3>
+      <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-20">
+       
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 justify-items-center">
-            {skillData.map((skill, idx) => (
-              <motion.div
+        <div className="relative w-full overflow-hidden">
+          <div
+            className="flex gap-12 animate-scroll whitespace-nowrap"
+            style={{ animation: 'scroll 15s linear infinite' }}
+          >
+            {[
+              { name: 'HTML', img: htmlIcon },
+              { name: 'CSS', img: cssIcon },
+              { name: 'Tailwind', img: tailwindIcon },
+              { name: 'JavaScript', img: jsIcon },
+              { name: 'React', img: reactIcon },
+              { name: 'Next.js', img: nextIcon },
+              { name: 'Flutter', img: flutterIcon },
+              { name: 'Node.js', img: nodeIcon },
+              { name: 'MongoDB', img: mongoIcon },
+              { name: 'Git', img: gitIcon },
+            ].map((skill, idx) => (
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1, duration: 0.4 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center group hover:scale-110 transition-transform"
+                className="flex flex-col items-center min-w-[100px]"
               >
                 <div className="w-14 h-14 md:w-16 md:h-16 mb-2">
                   <img
@@ -200,13 +235,13 @@ export default function AboutMe() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-sm font-medium text-gray-700 group-hover:text-[#C33235]">
+                <span className="text-sm font-medium text-gray-700">
                   {skill.name}
                 </span>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
     </main>
   );
