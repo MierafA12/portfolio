@@ -12,7 +12,7 @@ export default function Navbar() {
 
       <ul className="hidden md:flex gap-6 font-medium text-sm uppercase tracking-wide">
         <li><Link href="/" className="hover:text-[#C33235] transition">Home</Link></li>
-        <li><Link href="/about" className="hover:text-[#C33235] transition">About Us</Link></li>
+        <li><Link href="/about" className="hover:text-[#C33235] transition">About Me</Link></li>
         <li><Link href="/services" className="hover:text-[#C33235] transition">Services</Link></li>
         <li><Link href="/work" className="hover:text-[#C33235] transition">Projects</Link></li>
         <li><Link href="/blog" className="hover:text-[#C33235] transition">Blog</Link></li>
