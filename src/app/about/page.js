@@ -15,7 +15,7 @@ import nodeIcon from '../../../public/node.webp';
 import mongoIcon from '../../../public/mongo.jpg';
 import gitIcon from '../../../public/git.webp';
 import flutterIcon from '../../../public/flutter.webp'
-
+import figmaIcon from '../../../public/figma.webp'
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -127,7 +127,7 @@ export default function AboutMe() {
         )}
 
         {activeTab === 'education' && (
-  <div className="py-10 md:py-14 border-t border-b border-gray-200">
+  <div className="py-10 md:py-14 border-t border-b border-[#C33235]">
     <h3 className="text-3xl font-bold text-[#C33235] mb-6">Education</h3>
     <div className="space-y-6">
       <div>
@@ -159,44 +159,53 @@ export default function AboutMe() {
 )}
 
 {activeTab === 'experience' && (
-  <div className="py-10 md:py-14 border-t border-b border-[#C33235]">
-    <h3 className="text-3xl font-bold text-[#C33235] mb-6">Experience</h3>
-    <div className="space-y-6">
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          Frontend Intern at Prodigy InfoTech
-        </h4>
-        <p className="text-sm text-gray-500">March 2024 – Present</p>
-        <p className="mt-2 text-gray-700">
-          Built interactive web interfaces, landing pages, and contributed to
-          internal tools. Focused on responsive layout and animations.
+  <section className="bg-white rounded-xl p-8 shadow-md">
+    <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
+
+    {/* Experience + Certificate Item */}
+    <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
+      {/* Experience Info */}
+      <div className="flex-1">
+        <h4 className="text-lg font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
+        <p className="text-gray-600 text-sm mt-1">2024</p>
+        <p className="mt-2 text-gray-700 leading-relaxed">
+          Contributed to real-world frontend projects using React and Tailwind. Participated in weekly code reviews and agile standups.
         </p>
       </div>
 
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          Language Learning App (React Native + Node.js)
-        </h4>
-        <p className="text-sm text-gray-500">Personal Project · 2024</p>
-        <p className="mt-2 text-gray-700">
-          Designed and developed an educational mobile app with offline
-          capabilities, user goals, and payment integration.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          Freelance Projects (Web & Admin Dashboards)
-        </h4>
-        <p className="text-sm text-gray-500">Remote · 2023 – 2024</p>
-        <p className="mt-2 text-gray-700">
-          Delivered custom portfolio websites, blogs, and admin panels for
-          clients using React, Tailwind, and Next.js.
-        </p>
+      {/* Certificate Image */}
+      <div className="flex-1 max-w-xs mx-auto md:mx-0">
+        <img
+          src="/certificates/prodigy_cert.webp" // make sure this exists in your /public/certificates folder
+          alt="Prodigy Internship Certificate"
+          className="rounded-md shadow-md hover:scale-105 transition-transform duration-300"
+        />
+        <p className="text-sm text-center text-gray-600 mt-2">View Certificate</p>
       </div>
     </div>
-  </div>
+
+    {/* Second Experience + Certificate */}
+    <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
+      <div className="flex-1">
+        <h4 className="text-lg font-semibold text-gray-800">React Native Bootcamp</h4>
+        <p className="text-gray-600 text-sm mt-1">Remote Training – 2024</p>
+        <p className="mt-2 text-gray-700 leading-relaxed">
+          Completed hands-on mobile app development training using React Native. Built and deployed working applications as part of the capstone.
+        </p>
+      </div>
+
+      <div className="flex-1 max-w-xs mx-auto md:mx-0">
+        <img
+          src="/certificates/rn_bootcamp_cert.webp"
+          alt="React Native Bootcamp Certificate"
+          className="rounded-md shadow-md hover:scale-105 transition-transform duration-300"
+        />
+        <p className="text-sm text-center text-gray-600 mt-2">View Certificate</p>
+      </div>
+    </div>
+  </section>
 )}
+
 
       </section>
 
@@ -204,7 +213,7 @@ export default function AboutMe() {
        <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">
           Skills
         </h3>
-      <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-20">
+      <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-10">
        
 
         <div className="relative w-full overflow-hidden">
@@ -223,6 +232,7 @@ export default function AboutMe() {
               { name: 'Node.js', img: nodeIcon },
               { name: 'MongoDB', img: mongoIcon },
               { name: 'Git', img: gitIcon },
+              { name: 'Figma', img: figmaIcon },
             ].map((skill, idx) => (
               <div
                 key={idx}
