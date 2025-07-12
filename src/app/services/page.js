@@ -30,7 +30,7 @@ const services = [
   },
 ];
   return(
-    <section className="bg-[#f9f8fe] py-16 px-6 md:px-20">
+    <section className="bg-[#f9f8fe] py-16 px-6 md:px-20 mt-20">
   <div className="text-center mb-12">
     <h2 className="text-4xl font-extrabold text-[#C33235] mb-4">My Services</h2>
     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
