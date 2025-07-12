@@ -66,68 +66,79 @@ const projects = [
   },
 ];
 return(
-    <section className="py-20 px-6 md:px-20 bg-white">
-  <div className="text-center mb-12">
+<section className="relative py-24 px-6 md:px-20 bg-white">
+  <div className="text-center mb-16">
     <h2 className="text-4xl font-extrabold text-[#C33235] mb-4">Projects</h2>
     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-      Here are some of the projects I’ve built to solve real-world problems and sharpen my skills across web and mobile development.
+      Here are some of the projects I’ve built to solve real-world problems and sharpen my skills.
     </p>
   </div>
 
-  <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+  <div className="relative timeline-center">
     {projects.map((project, index) => (
-      <motion.div
+      <div
         key={index}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        viewport={{ once: true }}
-        className="bg-[#f9f9f9] border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+        className={`relative mb-24 flex flex-col md:flex-row items-center ${
+          index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+        }`}
       >
-        <div className="w-full h-48 relative rounded-t-xl overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-[#C33235] mb-2">{project.title}</h3>
-          <p className="text-gray-700 text-sm mb-4">{project.description}</p>
-          
-          <div className="mb-3">
-            <p className="text-sm font-medium text-gray-800 mb-1">Tech Stack:</p>
-            <ul className="flex flex-wrap gap-2 text-xs text-gray-600">
-              {project.techStack.map((tech, i) => (
-                <li
-                  key={i}
-                  className="bg-white border px-2 py-1 rounded-md shadow-sm"
-                >
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-gray-800 mb-1">What I learned:</p>
-            <p className="text-sm text-gray-600">{project.experience}</p>
-          </div>
-
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="md:w-[58%] z-10 bg-[#f9f8fe] border border-[#C33235] rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+        >
+          <div
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 0 ? '' : 'md:flex-row-reverse'
+            }`}
           >
-            View Code →
-          </a>
-        </div>
-      </motion.div>
+            {/* Image */}
+            <div className="relative md:w-1/2 h-56 md:h-64">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="md:w-1/2 p-6">
+              <h3 className="text-xl font-bold text-[#C33235] mb-2">{project.title}</h3>
+              <p className="text-gray-700 text-sm mb-4">{project.description}</p>
+
+              <div className="mb-3">
+                <p className="text-sm font-medium text-gray-800 mb-1">Tech Stack:</p>
+                <ul className="flex flex-wrap gap-2 text-xs text-[#C33235]">
+                  {project.techStack.map((tech, i) => (
+                    <li key={i} className="bg-white border px-2 py-1 rounded-md shadow-sm">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-sm font-medium text-gray-800 mb-1">What I learned:</p>
+                <p className="text-sm text-gray-600">{project.experience}</p>
+              </div>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+              >
+                View Code →
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     ))}
   </div>
 </section>
-
 ) 
 }
