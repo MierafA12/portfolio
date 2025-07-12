@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { FaTelegramPlane, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
-
-// Skill Icons
 import htmlIcon from '../../../public/html.webp';
 import cssIcon from '../../../public/css.webp';
 import jsIcon from '../../../public/js.webp';
@@ -16,6 +14,7 @@ import mongoIcon from '../../../public/mongo.jpg';
 import gitIcon from '../../../public/git.webp';
 import flutterIcon from '../../../public/flutter.webp'
 import figmaIcon from '../../../public/figma.webp'
+import pythonIcon from '../../../public/python.webp'
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -214,11 +213,9 @@ export default function AboutMe() {
           Skills
         </h3>
       <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-10">
-       
-
         <div className="relative w-full overflow-hidden">
           <div
-            className="flex gap-12 animate-scroll whitespace-nowrap"
+            className="flex gap-14 animate-scroll whitespace-nowrap"
             style={{ animation: 'scroll 15s linear infinite' }}
           >
             {[
@@ -233,6 +230,7 @@ export default function AboutMe() {
               { name: 'MongoDB', img: mongoIcon },
               { name: 'Git', img: gitIcon },
               { name: 'Figma', img: figmaIcon },
+              { name: 'Python', img: pythonIcon },
             ].map((skill, idx) => (
               <div
                 key={idx}
