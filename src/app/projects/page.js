@@ -68,7 +68,7 @@ const projects = [
 return(
 <section className="relative py-24 px-6 md:px-20 bg-white">
   <div className="text-center mb-16">
-    <h2 className="text-4xl font-extrabold text-[#C33235] mb-4">Projects</h2>
+    <h2 className="text-4xl font-extrabold text-[#C33235] mt-4">Projects</h2>
     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
       Here are some of the projects I’ve built to solve real-world problems and sharpen my skills.
     </p>
@@ -95,12 +95,12 @@ return(
             }`}
           >
             {/* Image */}
-            <div className="relative md:w-1/2 h-56 md:h-64">
+            <div className="relative md:w-1/2 h-90 ">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
