@@ -52,9 +52,9 @@ export default function AboutMe() {
       </section>
 
       {/* Tab Content */}
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto  border-t border-b border-[#C33235]">
         {activeTab === 'about' && (
-          <div className="bg-[#f8f8f8] rounded-xl p-8 shadow-md">
+          <div className="py-10 md:py-14  ">
             <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
               Personal Info
             </h3>
@@ -158,7 +158,7 @@ export default function AboutMe() {
 )}
 
 {activeTab === 'experience' && (
-  <section className="bg-white rounded-xl p-8 shadow-md">
+  <section className="py-10 md:py-14 ">
     <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
 
     {/* Experience + Certificate Item */}
