@@ -21,3 +21,43 @@ a {
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 0s linear infinite;
+}
+@media (min-width: 768px) {
+  .timeline-center::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #C33235;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) {
+  .timeline-center::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #C33235;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+
