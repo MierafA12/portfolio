@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="bg-[#f9f8fe] text-gray-900">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-20">
+      <section className="min-h-screen flex flex-col justify-center px-6 md:px-20 pt-10">
         <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
           {/* Text Section */}
           <div className="max-w-xl text-center md:text-left">
@@ -43,55 +43,54 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Profile & Stats Section */}
-      
-            {/* Profile Image */}
-            <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg">
-              <Image
-                src={heroImage}
-                alt="Profile"
-                width={180}
-                height={180}
-                className="rounded-full object-cover"
-                priority
-              />
-            </div>
-            </div>
-    </section>
-            {/* Stats Row */}
-            <div className="flex flex-wrap justify-center gap-4 ">
-              {/* Experience */}
-              <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center">
-                <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
-                  <FaBriefcase />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">2+</h3>
-                <p className="text-gray-600 text-sm">Years of Experience</p>
-              </div>
+          {/* Profile Image */}
+          <div className="rounded-full bg-[#edf2f8] shadow-lg">
+            <Image
+              src={heroImage}
+              alt="Profile"
+              width={180}
+              height={180}
+              className="rounded-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
-              {/* Projects */}
-              <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center">
-                <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
-                  <FaProjectDiagram />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">15+</h3>
-                <p className="text-gray-600 text-sm">Projects Completed</p>
-              </div>
-
-              {/* Clients */}
-              <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center">
-                <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
-                  <FaUsers />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">10+</h3>
-                <p className="text-gray-600 text-sm">Happy Clients</p>
-              </div>
+      {/* Stats Section - Centered below Hero */}
+      <section className=" ">
+        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+          {/* Experience */}
+          <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center w-44">
+            <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
+              <FaBriefcase />
             </div>
+            <h3 className="text-2xl font-bold text-gray-800">2+</h3>
+            <p className="text-gray-600 text-sm">Years of Experience</p>
+          </div>
 
-  
+          {/* Projects */}
+          <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center w-44">
+            <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
+              <FaProjectDiagram />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">15+</h3>
+            <p className="text-gray-600 text-sm">Projects Completed</p>
+          </div>
+
+          {/* Clients */}
+          <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center w-44">
+            <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
+              <FaUsers />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">10+</h3>
+            <p className="text-gray-600 text-sm">Happy Clients</p>
+          </div>
+        </div>
+      </section>
 
       {/* About Me Section */}
-      <section className="mt-10 pt-10">
+      <section className="mt-16 pt-10">
         <AboutMe />
       </section>
 
