@@ -4,7 +4,7 @@ import think from '../../public/think.png';
 
 export default function GetInTouch() {
   return (
-    <section className="py-20 px-6 md:px-20 bg-white">
+    <section className=" px-6 md:px-20 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16">
         {/* Text Section */}
         <div className="md:w-1/2 space-y-6">
