@@ -56,9 +56,10 @@ export default function Home() {
                 priority
               />
             </div>
-
+            </div>
+    </section>
             {/* Stats Row */}
-            <div className="flex flex-wrap justify-center gap-4 mt-4">
+            <div className="flex flex-wrap justify-center gap-4 ">
               {/* Experience */}
               <div className="bg-[#f1f5f9] px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition text-center">
                 <div className="text-[#C33235] text-3xl mb-2 flex justify-center">
@@ -86,8 +87,8 @@ export default function Home() {
                 <p className="text-gray-600 text-sm">Happy Clients</p>
               </div>
             </div>
-          </div>
-      </section>
+
+  
 
       {/* About Me Section */}
       <section className="mt-10 pt-10">
