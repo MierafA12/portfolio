@@ -46,55 +46,9 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            {/* Profile Image + Orbiting Icons */}
-            <div className="relative flex items-center justify-center w-[300px] h-[300px] z-10 mr-40">
-              {/* Orbiting Icons */}
-              <div className="absolute w-full h-full orbit-ring">
-                <img
-                  src={jsIcon.src}
-                  alt="Flutter"
-                  className="orbit-icon"
-                  style={{
-                    top: 0,
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                  }}
-                />
-                <img
-                  src={reactIcon.src}
-                  alt="React"
-                  className="orbit-icon"
-                  style={{
-                    top: '25%',
-                    right: 0,
-                    transform: 'translate(50%, -50%)',
-                  }}
-                />
-                <img
-                  src={nodeIcon.src}
-                  alt="Node"
-                  className="orbit-icon"
-                  style={{
-                    bottom: 0,
-                    left: '50%',
-                    transform: 'translate(-50%, 50%)',
-                  }}
-                />
-                <img
-                  src={tsIcon.src}
-                  alt="Tailwind"
-                  className="orbit-icon"
-                  style={{
-                    top: '25%',
-                    left: 0,
-                    transform: 'translate(-50%, -50%)',
-                  }}
-                />
-              </div>
-
               {/* Center Profile Image */}
-              <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg z-20">
+              
+              <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg z-20 mr-60">
                 <Image
                   src={heroImage}
                   alt="Profile"
@@ -106,32 +60,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
 
-        <style jsx>{`
-          @keyframes orbit-spin {
-            0% {
-              transform: rotate(0deg);
-            }
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-
-          .orbit-ring {
-            position: absolute;
-            top: 0;
-            left: 0;
-            animation: orbit-spin 5s linear infinite;
-          }
-
-          .orbit-icon {
-            position: absolute;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-          }
-        `}</style>
       </section>
 
       {/* About Me Section */}
