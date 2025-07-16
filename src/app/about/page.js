@@ -51,8 +51,7 @@ export default function AboutMe() {
         </div>
       </section>
 
-      {/* Tab Content */}
-      <section className="max-w-6xl mx-auto  border-t border-b border-[#C33235]">
+      <section className="max-w-6xl mx-auto border-t border-b border-[#C33235]">
         {activeTab === 'about' && (
           <div className="py-10 md:py-14  ">
             <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
@@ -126,7 +125,7 @@ export default function AboutMe() {
         )}
 
         {activeTab === 'education' && (
-  <div className="py-10 md:py-14 border-t border-b border-[#C33235]">
+  <div className="py-10 md:py-14 ">
     <h3 className="text-3xl font-bold text-[#C33235] mb-6">Education</h3>
     <div className="space-y-6">
       <div>
@@ -158,14 +157,12 @@ export default function AboutMe() {
 )}
 
 {activeTab === 'experience' && (
-  <section className="py-10 md:py-14 ">
+  <section className="py-10 md:py-14  ">
     <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
 
-    {/* Experience + Certificate Item */}
     <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
-      {/* Experience Info */}
       <div className="flex-1">
-        <h4 className="text-lg font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
+        <h4 className="text-xl font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
         <p className="text-gray-600 text-sm mt-1">2024</p>
         <p className="mt-2 text-gray-700 leading-relaxed">
           Contributed to real-world frontend projects using React and Tailwind. Participated in weekly code reviews and agile standups.
