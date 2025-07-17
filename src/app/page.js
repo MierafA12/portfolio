@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="bg-[#f9f8fe] text-gray-900">
       {/* Hero Section Full Height */}
-      <section className="h-screen px-6 md:px-20 flex flex-col justify-center">
+      <section className="h-screen px-6 md:px-20 flex flex-col justify-center ml-20">
         <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Text Section */}
           <div className="max-w-xl text-center md:text-left">
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
 
           {/* Image + Stats Container */}
-          <div className="flex flex-col items-center gap-3 -mt-6">
+          <div className="flex flex-col items-center gap-3 -mt-6 mr-20">
             {/* Profile Image */}
             <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg">
               <Image
