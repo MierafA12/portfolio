@@ -51,7 +51,7 @@ export default function AboutMe() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto border-t-2 border-b border-[#C33235]">
+      <section className="max-w-6xl mx-auto border-t-2 border-b-2 border-[#C33235]">
         {activeTab === 'about' && (
           <div className="py-10 md:py-14  ">
             <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
