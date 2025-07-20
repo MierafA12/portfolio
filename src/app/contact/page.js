@@ -12,7 +12,7 @@ export default function Contact() {
       </div>
 
       {/* Right form */}
-      <div className="w-full md:w-1/2 space-y-5">
+      <div className="w-full md:w-1/2 space-y-5 pr-24">
         <h2 className="text-3xl font-semibold mb-4 text-gray-800">Get in Touch</h2>
 
         {/* Name */}
@@ -73,7 +73,7 @@ export default function Contact() {
         </div>
 
         {/* Submit Button */}
-        <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-md transition duration-200">
+        <button className="bg-red-600 hover:bg-red-700 text-white font-bold  py-2 px-6 rounded-md transition duration-200">
           Get in Touch
         </button>
       </div>
