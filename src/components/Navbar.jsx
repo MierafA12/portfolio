@@ -21,7 +21,7 @@ export default function Navbar() {
 
       <div className="hidden md:flex items-center mx-4">
         <Link
-          href="https://t.me/yourTelegramUsername"
+          href="https://t.me/mafi124679"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-[#C33235] text-white px-5 py-2 rounded-full font-semibold hover:bg-red-600 transition text-sm"
