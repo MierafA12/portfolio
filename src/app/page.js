@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
           {/* Image + Stats Container */}
-          <div className="flex flex-col items-center gap-3 -mt-6 mr-20">
+          <div className="flex flex-col items-center gap-3 mt-20 mr-20">
             {/* Profile Image */}
             <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg">
               <Image
