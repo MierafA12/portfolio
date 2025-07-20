@@ -7,6 +7,7 @@ import Services from './services/page';
 import GetInTouch from '@/components/GetInTouch';
 import { FaBriefcase, FaProjectDiagram, FaUsers } from 'react-icons/fa';
 import Footer from '../components/Footer';
+import Contact from './contact/page';
 
 export default function Home() {
   return (
@@ -95,6 +96,7 @@ export default function Home() {
         <AboutMe />
         <GetInTouch />
         <Services />
+        <Contact />
         <Footer/>
       </section>
     </main>
