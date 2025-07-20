@@ -78,7 +78,7 @@ export default function AboutMe() {
                 <p className="text-gray-500">Follow</p>
                 <div className="flex gap-4 mt-2 text-[#C33235] text-xl">
                   <Link
-                    href="https://t.me/yourTelegramUsername"
+                    href="https://t.me/mafi124679"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Telegram"
@@ -87,7 +87,7 @@ export default function AboutMe() {
                     <FaTelegramPlane />
                   </Link>
                   <Link
-                    href="https://linkedin.com/in/yourLinkedInUsername"
+                    href="https://linkedin.com/in/mieraf-abebe-971ba1323"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="LinkedIn"
@@ -96,7 +96,7 @@ export default function AboutMe() {
                     <FaLinkedinIn />
                   </Link>
                   <Link
-                    href="https://github.com/yourGitHubUsername"
+                    href="https://github.com/MierafA12"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="GitHub"
