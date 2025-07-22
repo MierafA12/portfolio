@@ -9,22 +9,32 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef();
-  const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
 
-  const validatePhone = (phone) => {
-    const ethiopianOrIntlRegex = /^(\+251\d{9}|\+?\d{7,15})$/;
-    return ethiopianOrIntlRegex.test(phone);
+  const validate = (formData) => {
+    const newErrors = {};
+
+    const phoneRegex = /^(\+251|0)?9\d{8}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone =
+        "Please enter a valid Ethiopian phone number (e.g., +251912345678 or 0912345678)";
+    }
+
+    return newErrors;
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = Object.fromEntries(new FormData(form.current));
+    const validationErrors = validate(formData);
 
-    const phone = form.current.phone.value.trim();
-
-    if (!validatePhone(phone)) {
-      setStatus("📞 Please enter a valid Ethiopian or international phone number.");
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
+
+    setErrors({}); // clear previous errors
 
     emailjs
       .sendForm(
@@ -35,17 +45,24 @@ export default function Contact() {
       )
       .then(
         () => {
-          setStatus("✅ Message sent successfully! I’ll get back to you soon.");
+          setSuccessMessage("✅ Message sent successfully!");
+          setTimeout(() => {
+            setSuccessMessage("");
+          }, 4000);
           form.current.reset();
         },
-        () => {
-          setStatus("❌ Something went wrong. Don't worry—try again or reach me directly.");
+        (error) => {
+          console.error(error.text);
+          setSuccessMessage("❌ Something went wrong. Please try again.");
+          setTimeout(() => {
+            setSuccessMessage("");
+          }, 4000);
         }
       );
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-4 py-10">
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10">
       {/* Left image */}
       <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
         <Image
@@ -59,82 +76,92 @@ export default function Contact() {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg space-y-5 p-4"
+        className="w-full max-w-lg space-y-5 md:pr-10"
       >
         <h2 className="text-3xl font-semibold mb-2 text-gray-800">Get in Touch</h2>
 
-        {/* Name */}
-        <div className="flex items-center gap-2 border p-3 rounded-md">
-          <FaUser className="text-gray-500" />
-          <input
-            type="text"
-            name="fullname"
-            placeholder="Enter your full name"
-            className="w-full outline-none"
-            required
-          />
+        {successMessage && (
+          <div className="text-green-600 bg-green-100 border border-green-300 p-2 rounded-md transition duration-300">
+            {successMessage}
+          </div>
+        )}
+
+        {/* Full Name */}
+        <div>
+          <div className="flex items-center gap-2 border p-3 rounded-md">
+            <FaUser className="text-gray-500" />
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Enter your full name"
+              className="w-full outline-none"
+              required
+              onChange={() => setErrors((prev) => ({ ...prev, fullname: "" }))}
+            />
+          </div>
         </div>
 
         {/* Email */}
-        <div className="flex items-center gap-2 border p-3 rounded-md">
-          <FaEnvelope className="text-gray-500" />
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            className="w-full outline-none"
-            required
-          />
+        <div>
+          <div className="flex items-center gap-2 border p-3 rounded-md">
+            <FaEnvelope className="text-gray-500" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="w-full outline-none"
+              required
+              onChange={() => setErrors((prev) => ({ ...prev, email: "" }))}
+            />
+          </div>
         </div>
 
         {/* Phone */}
-        <div className="flex items-center gap-2 border p-3 rounded-md">
-          <FaPhone className="text-gray-500" />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="+251911223344 or +441234567890"
-            className="w-full outline-none"
-            required
-          />
+        <div>
+          <div className="flex items-center gap-2 border p-3 rounded-md">
+            <FaPhone className="text-gray-500" />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="e.g. +251912345678 or 0912345678"
+              className="w-full outline-none"
+              required
+              onChange={() => setErrors((prev) => ({ ...prev, phone: "" }))}
+            />
+          </div>
+          {errors.phone && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+          )}
         </div>
 
         {/* Subject */}
-        <div className="flex items-center gap-2 border p-3 rounded-md">
-          <MdSubject className="text-gray-500" />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            className="w-full outline-none"
-            required
-          />
+        <div>
+          <div className="flex items-center gap-2 border p-3 rounded-md">
+            <MdSubject className="text-gray-500" />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="w-full outline-none"
+              onChange={() => setErrors((prev) => ({ ...prev, subject: "" }))}
+            />
+          </div>
         </div>
 
         {/* Message */}
-        <div className="flex items-start gap-2 border p-3 rounded-md">
-          <FaRegCommentDots className="mt-1 text-gray-500" />
-          <textarea
-            name="message"
-            placeholder="Type your message"
-            rows="4"
-            className="w-full outline-none resize-none"
-            required
-          />
-        </div>
-
-        {/* Status Message */}
-        {status && (
-          <div
-            className={`text-sm px-4 py-2 rounded-md ${
-              status.startsWith("✅")
-                ? "bg-green-100 text-green-800"
-                : "bg-red-100 text-red-800"
-            }`}
-          >
-            {status}
+        <div>
+          <div className="flex items-start gap-2 border p-3 rounded-md">
+            <FaRegCommentDots className="mt-1 text-gray-500" />
+            <textarea
+              name="message"
+              placeholder="Don't be afraid to talk with me — I’m here to help!"
+              rows="4"
+              className="w-full outline-none resize-none"
+              required
+              onChange={() => setErrors((prev) => ({ ...prev, message: "" }))}
+            />
           </div>
-        )}
+        </div>
 
         {/* Submit Button */}
         <button
