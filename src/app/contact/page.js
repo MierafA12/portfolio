@@ -1,9 +1,37 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaRegCommentDots } from "react-icons/fa";
 import { MdSubject } from "react-icons/md";
 import Contactme from "../../../public/contactme.png";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_2vyz96p",     // replace with your EmailJS service ID
+        "template_gn5dfqo",    // replace with your template ID
+        form.current,
+        "JfQTPFDwsbanjVcuL"      // replace with your public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Something went wrong!");
+        }
+      );
+  };
+
   return (
     <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10">
       {/* Left image */}
@@ -12,7 +40,11 @@ export default function Contact() {
       </div>
 
       {/* Right form */}
-      <div className="w-full md:w-1/2 space-y-5 pr-24">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="w-full md:w-1/2 space-y-5 pr-24"
+      >
         <h2 className="text-3xl font-semibold mb-4 text-gray-800">Get in Touch</h2>
 
         {/* Name */}
@@ -69,14 +101,18 @@ export default function Contact() {
             placeholder="Type your message"
             rows="4"
             className="w-full outline-none resize-none"
+            required
           />
         </div>
 
         {/* Submit Button */}
-        <button className="bg-red-600 hover:bg-red-700 text-white font-bold  py-2 px-6 rounded-md transition duration-200">
+        <button
+          type="submit"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md transition duration-200"
+        >
           Get in Touch
         </button>
-      </div>
+      </form>
     </div>
   );
 }
