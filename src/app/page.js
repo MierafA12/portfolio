@@ -25,7 +25,8 @@ export default function Home() {
               Software Engineer
             </p>
             <p className="mt-3 text-gray-700 text-base leading-relaxed">
-              I’m a web & mobile developer focused on crafting frontend solutions with React, Next.js, and React Native.
+              I'm a front-end and mobile developer focused on building clean, user-friendly digital experiences.
+Reliable, detail-oriented, and always learning to craft better interfaces and interactions.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
