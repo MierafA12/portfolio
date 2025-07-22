@@ -9,11 +9,22 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef();
-  const [statusMessage, setStatusMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const validatePhone = (phone) => {
+    const ethiopianOrIntlRegex = /^(\+251\d{9}|\+?\d{7,15})$/;
+    return ethiopianOrIntlRegex.test(phone);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const phone = form.current.phone.value.trim();
+
+    if (!validatePhone(phone)) {
+      setStatus("📞 Please enter a valid Ethiopian or international phone number.");
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -24,20 +35,18 @@ export default function Contact() {
       )
       .then(
         () => {
-          setIsSuccess(true);
-          setStatusMessage("✅ Message sent successfully!");
+          setStatus("✅ Message sent successfully! I’ll get back to you soon.");
           form.current.reset();
         },
         () => {
-          setIsSuccess(false);
-          setStatusMessage("❌ Something went wrong. Please try again.");
+          setStatus("❌ Something went wrong. Don't worry—try again or reach me directly.");
         }
       );
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10">
-      {/* Left Image */}
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-4 py-10">
+      {/* Left image */}
       <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
         <Image
           src={Contactme}
@@ -46,27 +55,13 @@ export default function Contact() {
         />
       </div>
 
-      {/* Right Form */}
+      {/* Right form */}
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-full md:w-1/2 space-y-5 pr-4"
+        className="w-full max-w-lg space-y-5 p-4"
       >
-        <h2 className="text-3xl font-semibold text-gray-800">Get in Touch</h2>
-        <p className="text-gray-500 mb-4">
-          Don’t hesitate to contact me — I’m here to help you!
-        </p>
-
-        {/* Show status messages */}
-        {statusMessage && (
-          <div
-            className={`p-3 rounded-md text-sm font-medium ${
-              isSuccess ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-            }`}
-          >
-            {statusMessage}
-          </div>
-        )}
+        <h2 className="text-3xl font-semibold mb-2 text-gray-800">Get in Touch</h2>
 
         {/* Name */}
         <div className="flex items-center gap-2 border p-3 rounded-md">
@@ -98,8 +93,9 @@ export default function Contact() {
           <input
             type="tel"
             name="phone"
-            placeholder="Enter your phone number"
+            placeholder="+251911223344 or +441234567890"
             className="w-full outline-none"
+            required
           />
         </div>
 
@@ -111,6 +107,7 @@ export default function Contact() {
             name="subject"
             placeholder="Subject"
             className="w-full outline-none"
+            required
           />
         </div>
 
@@ -126,12 +123,25 @@ export default function Contact() {
           />
         </div>
 
+        {/* Status Message */}
+        {status && (
+          <div
+            className={`text-sm px-4 py-2 rounded-md ${
+              status.startsWith("✅")
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
+            {status}
+          </div>
+        )}
+
         {/* Submit Button */}
         <button
           type="submit"
           className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md transition duration-200"
         >
-          Send Message
+          Get in Touch
         </button>
       </form>
     </div>
