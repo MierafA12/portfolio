@@ -12,9 +12,10 @@ import tailwindIcon from '../../../public/tailwind.webp';
 import nodeIcon from '../../../public/node.webp';
 import mongoIcon from '../../../public/mongo.jpg';
 import gitIcon from '../../../public/git.webp';
-import flutterIcon from '../../../public/flutter.webp'
-import figmaIcon from '../../../public/figma.webp'
-import pythonIcon from '../../../public/python.webp'
+import flutterIcon from '../../../public/flutter.webp';
+import figmaIcon from '../../../public/figma.webp';
+import pythonIcon from '../../../public/python.webp';
+
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -35,7 +36,7 @@ export default function AboutMe() {
 
         {/* Tab Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
-          {['about', 'education', 'experience'].map((tab) => (
+          {['about', 'education', 'experience', 'certificates'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -52,8 +53,9 @@ export default function AboutMe() {
       </section>
 
       <section className="max-w-6xl mx-auto border-t-2 border-b-2 border-[#C33235]">
+        {/* ABOUT TAB */}
         {activeTab === 'about' && (
-          <div className="py-10 md:py-14  ">
+          <div className="py-10 md:py-14">
             <h3 className="text-2xl font-bold mb-4 text-[#C33235]">
               Personal Info
             </h3>
@@ -77,44 +79,17 @@ export default function AboutMe() {
               <div className="bg-white p-4 rounded-md border">
                 <p className="text-gray-500">Follow</p>
                 <div className="flex gap-4 mt-2 text-[#C33235] text-xl">
-                  <Link
-                    href="https://t.me/mafi124679"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Telegram"
-                    className="hover:text-red-600 transition"
-                  >
+                  <Link href="https://t.me/mafi124679" target="_blank" title="Telegram">
                     <FaTelegramPlane />
                   </Link>
-                  <Link
-                    href="https://linkedin.com/in/mieraf-abebe-971ba1323"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="LinkedIn"
-                    className="hover:text-red-600 transition"
-                  >
+                  <Link href="https://linkedin.com/in/mieraf-abebe-971ba1323" target="_blank" title="LinkedIn">
                     <FaLinkedinIn />
                   </Link>
-                  <Link
-                    href="https://github.com/MierafA12"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                    className="hover:text-red-600 transition"
-                  >
+                  <Link href="https://github.com/MierafA12" target="_blank" title="GitHub">
                     <FaGithub />
                   </Link>
-                  <Link
-                    href="mailto:mierafabebe12@gmail.com"
-                    title="Email"
-                    className="hover:text-red-600 transition"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
+                  <Link href="mailto:mierafabebe12@gmail.com" title="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v1.2l-10 6.2-10-6.2V6c0-1.1.9-2 2-2zm16 3.4v10.6c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V7.4l10 6.2 10-6.2z" />
                     </svg>
                   </Link>
@@ -124,97 +99,88 @@ export default function AboutMe() {
           </div>
         )}
 
+        {/* EDUCATION TAB */}
         {activeTab === 'education' && (
-  <div className="py-10 md:py-14 ">
-    <h3 className="text-3xl font-bold text-[#C33235] mb-6">Education</h3>
-    <div className="space-y-6">
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          BSc in Software Engineering
-        </h4>
-        <p className="text-sm text-gray-500">
-          Debre Birhan University · Expected 2026
-        </p>
-      </div>
+          <div className="py-10 md:py-14">
+            <h3 className="text-3xl font-bold text-[#C33235] mb-6">Education</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800">
+                  BSc in Software Engineering
+                </h4>
+                <p className="text-sm text-gray-500">
+                  Debre Birhan University · Expected 2026
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800">
+                  Frontend Mentorship
+                </h4>
+                <p className="text-sm text-gray-500">
+                  Self-taught via online platforms (YouTube, docs, projects)
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800">
+                  React Native Bootcamp
+                </h4>
+                <p className="text-sm text-gray-500">Remote Training · 2024</p>
+              </div>
+            </div>
+          </div>
+        )}
 
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          Frontend Mentorship
-        </h4>
-        <p className="text-sm text-gray-500">
-          Self-taught via online platforms (YouTube, docs, projects)
-        </p>
-      </div>
+        {/* EXPERIENCE TAB */}
+        {activeTab === 'experience' && (
+          <section className="py-10 md:py-14">
+            <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
+            <div className="space-y-8">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
+                <p className="text-gray-600 text-sm mt-1">2024</p>
+                <p className="mt-2 text-gray-700 leading-relaxed">
+                  Contributed to real-world frontend projects using React and Tailwind. Participated in weekly code reviews and agile standups.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800">React Native Bootcamp</h4>
+                <p className="text-gray-600 text-sm mt-1">Remote Training – 2024</p>
+                <p className="mt-2 text-gray-700 leading-relaxed">
+                  Completed hands-on mobile app development training using React Native. Built and deployed working applications as part of the capstone.
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
-      <div>
-        <h4 className="text-xl font-semibold text-gray-800">
-          React Native Bootcamp
-        </h4>
-        <p className="text-sm text-gray-500">Remote Training · 2024</p>
-      </div>
-    </div>
-  </div>
-)}
-
-{activeTab === 'experience' && (
-  <section className="py-10 md:py-14  ">
-    <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
-
-    <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
-      <div className="flex-1">
-        <h4 className="text-xl font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
-        <p className="text-gray-600 text-sm mt-1">2024</p>
-        <p className="mt-2 text-gray-700 leading-relaxed">
-          Contributed to real-world frontend projects using React and Tailwind. Participated in weekly code reviews and agile standups.
-        </p>
-      </div>
-
-      {/* Certificate Image */}
-      <div className="flex-1 max-w-xs mx-auto md:mx-0">
-        <img
-          src="/certificates/prodigy_cert.webp" // make sure this exists in your /public/certificates folder
-          alt="Prodigy Internship Certificate"
-          className="rounded-md shadow-md hover:scale-105 transition-transform duration-300"
-        />
-        <p className="text-sm text-center text-gray-600 mt-2">View Certificate</p>
-      </div>
-    </div>
-
-    {/* Second Experience + Certificate */}
-    <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
-      <div className="flex-1">
-        <h4 className="text-lg font-semibold text-gray-800">React Native Bootcamp</h4>
-        <p className="text-gray-600 text-sm mt-1">Remote Training – 2024</p>
-        <p className="mt-2 text-gray-700 leading-relaxed">
-          Completed hands-on mobile app development training using React Native. Built and deployed working applications as part of the capstone.
-        </p>
-      </div>
-
-      <div className="flex-1 max-w-xs mx-auto md:mx-0">
-        <img
-          src="/certificates/rn_bootcamp_cert.webp"
-          alt="React Native Bootcamp Certificate"
-          className="rounded-md shadow-md hover:scale-105 transition-transform duration-300"
-        />
-        <p className="text-sm text-center text-gray-600 mt-2">View Certificate</p>
-      </div>
-    </div>
-  </section>
-)}
-
-
+        {/* CERTIFICATES TAB */}
+        {activeTab === 'certificates' && (
+          <section className="py-10 md:py-14">
+            <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Certificates</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { name: 'Prodigy InfoTech Internship', src: '/certificates/prodigy_cert.webp' },
+                { name: 'React Native Bootcamp', src: '/certificates/rn_bootcamp_cert.webp' }
+              ].map((cert, index) => (
+                <div key={index} className="text-center">
+                  <img
+                    src={cert.src}
+                    alt={cert.name}
+                    className="rounded-md shadow-md hover:scale-105 transition-transform duration-300 mx-auto"
+                  />
+                  <p className="mt-2 text-sm text-gray-600">{cert.name}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </section>
 
-      {/* Animated Skills Section */}
-       <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">
-          Skills
-        </h3>
+      {/* SKILLS SECTION */}
+      <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">Skills</h3>
       <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-10">
         <div className="relative w-full overflow-hidden">
-          <div
-            className="flex gap-14 animate-scroll whitespace-nowrap"
-            style={{ animation: 'scroll 15s linear infinite' }}
-          >
+          <div className="flex gap-14 animate-scroll whitespace-nowrap" style={{ animation: 'scroll 15s linear infinite' }}>
             {[
               { name: 'HTML', img: htmlIcon },
               { name: 'CSS', img: cssIcon },
@@ -229,20 +195,11 @@ export default function AboutMe() {
               { name: 'Figma', img: figmaIcon },
               { name: 'Python', img: pythonIcon },
             ].map((skill, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center min-w-[100px]"
-              >
+              <div key={idx} className="flex flex-col items-center min-w-[100px]">
                 <div className="w-14 h-14 md:w-16 md:h-16 mb-2">
-                  <img
-                    src={skill.img.src}
-                    alt={skill.name}
-                    className="w-full h-full object-contain"
-                  />
+                  <img src={skill.img.src} alt={skill.name} className="w-full h-full object-contain" />
                 </div>
-                <span className="text-sm font-medium text-gray-700">
-                  {skill.name}
-                </span>
+                <span className="text-sm font-medium text-gray-700">{skill.name}</span>
               </div>
             ))}
           </div>
