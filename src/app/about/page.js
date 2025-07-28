@@ -17,6 +17,8 @@ import figmaIcon from '../../../public/figma.webp';
 import pythonIcon from '../../../public/python.webp';
 import mern from '../../../public/mern.jpg';
 import udacity from '../../../public/udacity.png'
+import flutter from '../../../public/UDAMY.jpg';
+import js from '../../../public/solo.png';
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -158,10 +160,12 @@ export default function AboutMe() {
               {activeTab === 'certificates' && (
           <section className="py-10 md:py-14">
             <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Certificates</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-6 md:grid-cols-2 gap-8">
               {[
                 { name: 'MERN stack ', img: mern },
                 { name: 'udacity|programming fundamentals', img: udacity },
+                { name: 'Flutter fundamentals', img: flutter },
+                { name: 'js practice', img: js },
               ].map((cert, index) => (
                 <div key={index} className="text-center">
                   <img
