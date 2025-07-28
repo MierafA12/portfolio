@@ -16,7 +16,7 @@ import flutterIcon from '../../../public/flutter.webp';
 import figmaIcon from '../../../public/figma.webp';
 import pythonIcon from '../../../public/python.webp';
 import mern from '../../../public/mern.jpg';
-
+import udacity from '../../../public/udacity.png'
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -160,8 +160,8 @@ export default function AboutMe() {
             <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Certificates</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { name: 'Prodigy InfoTech Internship', img: prodigyCert },
-                { name: 'React Native Bootcamp', img: rnBootcampCert },
+                { name: 'MERN stack ', img: mern },
+                { name: 'udacity|programming fundamentals', img: udacity },
               ].map((cert, index) => (
                 <div key={index} className="text-center">
                   <img
