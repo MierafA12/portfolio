@@ -15,6 +15,7 @@ import gitIcon from '../../../public/git.webp';
 import flutterIcon from '../../../public/flutter.webp';
 import figmaIcon from '../../../public/figma.webp';
 import pythonIcon from '../../../public/python.webp';
+import mern from '../../../public/mern.jpg';
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
@@ -154,17 +155,17 @@ export default function AboutMe() {
         )}
 
         {/* CERTIFICATES TAB */}
-        {activeTab === 'certificates' && (
+              {activeTab === 'certificates' && (
           <section className="py-10 md:py-14">
             <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Certificates</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { name: 'Prodigy InfoTech Internship', src: '/certificates/prodigy_cert.webp' },
-                { name: 'React Native Bootcamp', src: '/certificates/rn_bootcamp_cert.webp' }
+                { name: 'Prodigy InfoTech Internship', img: prodigyCert },
+                { name: 'React Native Bootcamp', img: rnBootcampCert },
               ].map((cert, index) => (
                 <div key={index} className="text-center">
                   <img
-                    src={cert.src}
+                    src={cert.img.src}
                     alt={cert.name}
                     className="rounded-md shadow-md hover:scale-105 transition-transform duration-300 mx-auto"
                   />
