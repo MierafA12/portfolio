@@ -8,6 +8,9 @@ import logo from '../../public/maf.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
@@ -20,6 +23,11 @@ export default function Navbar() {
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];
+
+      const toggleDarkMode = () => {
+      setIsDarkMode((prev) => !prev);
+      document.documentElement.classList.toggle('dark', !isDarkMode);
+    };
 
   return (
     <nav className="w-[95%] ml-10 fixed top-10 z-50 flex justify-between items-center py-3 px-6 md:px-10 bg-white text-gray-900 border border-gray-300 rounded-full shadow-inner backdrop-blur-md">
@@ -40,7 +48,7 @@ export default function Navbar() {
       </ul>
 
       {/* Desktop Telegram Button */}
-      <div className="hidden md:flex items-center mx-4">
+      <div className="hidden md:flex items-center mx-4 gap-2">
         <Link
           href="https://t.me/mafi124679"
           target="_blank"
@@ -52,7 +60,7 @@ export default function Navbar() {
         </Link>
          <button
           onClick={toggleDarkMode}
-          className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 dark:border-white bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white hover:scale-105 transition"
+          className="w-10 h-10  flex items-center justify-center rounded-full border dark:bg-gray-800 text-gray-800 dark:text-white hover:scale-105 transition"
           title="Toggle Dark Mode"
         >
           {isDarkMode ? '🌙' : '☀️'}
