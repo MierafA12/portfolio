@@ -157,30 +157,33 @@ export default function AboutMe() {
         )}
 
         {/* CERTIFICATES TAB */}
-              {activeTab === 'certificates' && (
-          <section className="py-10 md:py-14">
-            <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Certificates</h3>
-            <div className="grid grid-cols-6 md:grid-cols-2 gap-8">
-              {[
-                { name: 'MERN stack ', img: mern },
+      {activeTab === 'certificates' && (
+  <section className="py-10 md:py-14">
+    <h3 className="text-2xl font-bold mb-6 text-[#C33235] text-center">Certificates</h3>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+      {[
+        { name: 'MERN stack ', img: mern },
                 { name: 'udacity|programming fundamentals', img: udacity },
                 { name: 'Flutter fundamentals', img: flutter },
                 { name: 'js practice', img: js },
-              ].map((cert, index) => (
-                <div key={index} className="text-center">
-                  <img
-                    src={cert.img.src}
-                    alt={cert.name}
-                    className="rounded-md shadow-md hover:scale-105 transition-transform duration-300 mx-auto"
-                  />
-                  <p className="mt-2 text-sm text-gray-600">{cert.name}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-      </section>
+      ].map((cert, index) => (
+        <div key={index} className="text-center">
+          <div className="w-[120px] h-[90px] md:w-[140px] md:h-[100px] mx-auto">
+            <img
+              src={cert.img.src}
+              alt={cert.name}
+              className="w-full h-full object-contain rounded-md shadow-md hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <p className="mt-2 text-sm text-gray-700 font-medium">{cert.name}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
 
+   </section>
       {/* SKILLS SECTION */}
       <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">Skills</h3>
       <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-10">
