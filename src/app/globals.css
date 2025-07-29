@@ -21,6 +21,18 @@ a {
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+.dark body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+.dark .navbar {
+  background-color: #1f2937;
+  color: white;
+}
+.dark .button {
+  color: #e5e7eb;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
