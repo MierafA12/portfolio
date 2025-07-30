@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import heroImage from '../../public/hero.jpg';
+import heroImage from '../../public/hero1.png';
 import AboutMe from './about/page';
 import Services from './services/page';
 import GetInTouch from '@/components/GetInTouch';
