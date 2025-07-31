@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Ethiolingo from '../../../public/EthioLingo.jpg'
+import Ethiolingo from '../../../public/EthioLingoo.jpg'
 import Lounge  from '../../../public/Lounge.png'
 import quizapp from '../../../public/quizapp.png'
 import task from '../../../public/task.jpg'
