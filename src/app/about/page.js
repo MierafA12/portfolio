@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaTelegramPlane, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
 import htmlIcon from '../../../public/html.webp';
 import cssIcon from '../../../public/css.webp';
@@ -92,9 +92,7 @@ export default function AboutMe() {
                     <FaGithub />
                   </Link>
                   <Link href="mailto:mierafabebe12@gmail.com" title="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v1.2l-10 6.2-10-6.2V6c0-1.1.9-2 2-2zm16 3.4v10.6c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V7.4l10 6.2 10-6.2z" />
-                    </svg>
+                  <FaEnvelope/>
                   </Link>
                 </div>
               </div>
@@ -112,7 +110,7 @@ export default function AboutMe() {
                   BSc in Software Engineering
                 </h4>
                 <p className="text-sm text-gray-500">
-                  Debre Birhan University · Expected 2026
+                  Debre Birhan University 
                 </p>
               </div>
               <div>
@@ -125,9 +123,9 @@ export default function AboutMe() {
               </div>
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">
-                  React Native Bootcamp
+                  MERN stack  Bootcamp
                 </h4>
-                <p className="text-sm text-gray-500">Remote Training · 2024</p>
+                <p className="text-sm text-gray-500"> Training · 2024</p>
               </div>
             </div>
           </div>
@@ -139,10 +137,10 @@ export default function AboutMe() {
             <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
             <div className="space-y-8">
               <div>
-                <h4 className="text-xl font-semibold text-gray-800">Frontend Intern at Prodigy InfoTech</h4>
+                <h4 className="text-xl font-semibold text-gray-800">Full stack bootcamp|MERN</h4>
                 <p className="text-gray-600 text-sm mt-1">2024</p>
                 <p className="mt-2 text-gray-700 leading-relaxed">
-                  Contributed to real-world frontend projects using React and Tailwind. Participated in weekly code reviews and agile standups.
+                  Contributed to real-world full stack  projects using React and nodejs. Participated in weekly code reviews and agile standups.
                 </p>
               </div>
               <div>
