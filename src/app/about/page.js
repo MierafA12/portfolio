@@ -138,10 +138,34 @@ export default function AboutMe() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">Full stack bootcamp|MERN</h4>
-                <p className="text-gray-600 text-sm mt-1">2024</p>
+                <p className="text-gray-600 text-sm mt-1">TechTonic tribe-2024</p>
                 <p className="mt-2 text-gray-700 leading-relaxed">
                   Contributed to real-world full stack  projects using React and nodejs. Participated in weekly code reviews and agile standups.
                 </p>
+                 <a
+                href= "https://www.linkedin.com/company/techtonic-tribe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+              >
+                see the campany →
+              </a>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-800">Mobile app dev| Flutter</h4>
+                <p className="text-gray-600 text-sm mt-1">Kuraztech-2025</p>
+                <p className="mt-2 text-gray-700 leading-relaxed">
+                 Worked with the mobile team to build cross-platform apps using Flutter, 
+                 contributing to real-world EdTech projects with responsive UI and API integration. 
+                </p>
+                 <a
+                href= "https://www.linkedin.com/company/kuraztech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+              >
+                see the campany →
+              </a>
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">React Native Bootcamp</h4>
