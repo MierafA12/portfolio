@@ -156,7 +156,7 @@ export default function AboutMe() {
                 <p className="text-gray-600 text-sm mt-1">Kuraztech-2025</p>
                 <p className="mt-2 text-gray-700 leading-relaxed">
                  Worked with the mobile team to build cross-platform apps using Flutter, 
-                 contributing to real-world EdTech projects with responsive UI and API integration. 
+                 contributing to real-world Tech projects with responsive UI and API integration. 
                 </p>
                  <a
                 href= "https://www.linkedin.com/company/kuraztech/"
