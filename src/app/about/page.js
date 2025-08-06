@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope } from 'react-icons/fa';
+import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope ,FaTwitter , FaMedium} from 'react-icons/fa';
 import Link from 'next/link';
 import htmlIcon from '../../../public/html.webp';
 import cssIcon from '../../../public/css.webp';
@@ -93,6 +93,9 @@ export default function AboutMe() {
                   </Link>
                   <Link href="mailto:mierafabebe12@gmail.com" title="Email">
                   <FaEnvelope/>
+                  </Link>
+                  <Link href="mailto:mierafabebe12@gmail.com" title="Email">
+                  <FaTwitter/>
                   </Link>
                 </div>
               </div>
