@@ -7,9 +7,6 @@ body {
   scroll-behavior: smooth;
 }
 
-a {
-  @apply hover:underline;
-}
 
 ::-webkit-scrollbar {
   width: 6px;
