@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope ,FaTwitter , FaMedium} from 'react-icons/fa';
+import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope ,FaTwitter , FaMedium } from 'react-icons/fa';
 import Link from 'next/link';
 import htmlIcon from '../../../public/html.webp';
 import cssIcon from '../../../public/css.webp';
