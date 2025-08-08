@@ -84,66 +84,63 @@ export default function Projects() {
             }`}
           >
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="w-full md:w-[58%] z-10 bg-[#f9f8fe] border border-[#C33235] rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-            >
-              <div
-                className={`flex flex-col md:flex-row ${
-                  index % 2 === 0 ? '' : 'md:flex-row-reverse'
-                }`}
-              >
-                {/* Image */}
-                <div className="relative w-full md:w-1/2 aspect-[4/3] sm:aspect-[3/2]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-contain rounded-t-xl md:rounded-t-none md:rounded-l-xl"
-                  />
-                </div>
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="w-full md:w-[90%] lg:w-[58%] z-10 bg-[#f9f8fe] border border-[#C33235] 
+             rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+>
+  <div
+    className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+  >
+    {/* Image */}
+    <div className="relative w-full md:w-1/2 h-[180px] sm:h-[200px] md:h-[220px] lg:h-[280px]">
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        className="object-contain"
+      />
+    </div>
 
-                {/* Content */}
-                <div className="w-full md:w-1/2 p-5 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#C33235] mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4">
-                    {project.description}
-                  </p>
+    {/* Content */}
+    <div className="w-full md:w-1/2 p-4 sm:p-5">
+      <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#C33235] mb-2">
+        {project.title}
+      </h3>
+      <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3">
+        {project.description}
+      </p>
 
-                  <div className="mb-3">
-                    <p className="text-sm font-medium text-gray-800 mb-1">Tech Stack:</p>
-                    <ul className="flex flex-wrap gap-2 text-xs text-[#C33235]">
-                      {project.techStack.map((tech, i) => (
-                        <li
-                          key={i}
-                          className="bg-white border px-2 py-1 rounded-md shadow-sm"
-                        >
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+      <div className="mb-3">
+        <p className="text-sm font-medium text-gray-800 mb-1">Tech Stack:</p>
+        <ul className="flex flex-wrap gap-2 text-xs sm:text-sm text-[#C33235]">
+          {project.techStack.map((tech, i) => (
+            <li key={i} className="bg-white border px-2 py-1 rounded-md shadow-sm">
+              {tech}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                  <div>
-                    <p className="text-sm font-medium text-gray-800 mb-1">What I learned:</p>
-                    <p className="text-sm text-gray-600">{project.experience}</p>
-                  </div>
+      <div>
+        <p className="text-sm font-medium text-gray-800 mb-1">What I learned:</p>
+        <p className="text-xs sm:text-sm text-gray-600">{project.experience}</p>
+      </div>
 
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
-                  >
-                    View Code →
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 text-xs sm:text-sm text-[#C33235] font-semibold hover:underline"
+      >
+        View Code →
+      </a>
+    </div>
+  </div>
+</motion.div>
+
           </div>
         ))}
       </div>
