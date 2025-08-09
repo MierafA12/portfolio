@@ -62,7 +62,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10">
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10 mt-9">
       {/* Left image */}
       <div className=" hidden lg:block w-full md:w-1/2 mb-10 md:mb-0 md:pr-10  ">
         <Image
