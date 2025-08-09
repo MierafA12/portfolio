@@ -36,7 +36,7 @@ export default function Navbar() {
     <nav className="w-[95%] ml-10 fixed top-10 z-50 flex justify-between items-center py-3 px-6 md:px-10 bg-white text-gray-900 border border-gray-300 rounded-full shadow-inner backdrop-blur-md">
       {/* Logo */}
       <div className="flex items-center gap-2 mx-4">
-        <Image src={logo} alt="Logo" width={70} height={70} className="object-contain" />
+        <Image src={logo} alt="Logo" width={90} height={90} className="object-contain" />
       </div>
 
       {/* Desktop Menu */}
