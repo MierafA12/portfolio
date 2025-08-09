@@ -22,12 +22,6 @@ export default function Blog() {
         <p className="text-gray-600 mb-6 text-sm sm:text-base">
           Our blog page is under construction. We’re cooking up something exciting for you!
         </p>
-        <a
-          href="/"
-          className="inline-block px-5 py-2 bg-[#C33235] text-white text-sm sm:text-base rounded-lg shadow-md hover:bg-[#a8282b] transition-colors"
-        >
-          Back to Home
-        </a>
       </motion.div>
     </main>
   );
