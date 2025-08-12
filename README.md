@@ -6,7 +6,7 @@ Built with modern web technologies to provide a clean, responsive, and engaging 
 
 ---
 
-## 📌 Features
+##  Features
 
 - **Responsive Design** – Works on all devices (desktop, tablet, mobile)
 - **Projects Showcase** – Highlighting my best work with live demos & source code
@@ -16,14 +16,14 @@ Built with modern web technologies to provide a clean, responsive, and engaging 
 
 ---
 
-## 🛠 Tech Stack
+## m Tech Stack
 
 - **Frontend:** nextjs  
 - **Other Tools:** Git, GitHub, VS Code
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Clone the repository**
 
@@ -57,7 +57,6 @@ Built with modern web technologies to provide a clean, responsive, and engaging 
 
 
 ⭐ *If you like this project, consider giving it a star on GitHub!*
-
 
 
 ```
