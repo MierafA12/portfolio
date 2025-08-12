@@ -1,5 +1,5 @@
 
-# 🌟 My Portfolio
+#  My Portfolio
 
 A personal portfolio website to showcase my projects, skills, and achievements.  
 Built with modern web technologies to provide a clean, responsive, and engaging user experience.
