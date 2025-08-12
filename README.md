@@ -16,9 +16,10 @@ Built with modern web technologies to provide a clean, responsive, and engaging 
 
 ---
 
-## m Tech Stack
+##  Tech Stack
 
-- **Frontend:** nextjs  
+- **Frontend:** nextjs
+- emaijs
 - **Other Tools:** Git, GitHub, VS Code
 
 ---
