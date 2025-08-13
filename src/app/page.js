@@ -48,7 +48,7 @@ export default function Home() {
     {/* Image + Stats Container */}
     <div className="w-full md:w-1/2 flex flex-col items-center gap-6 mt-14">
       {/* Profile Image */}
-      <div className="rounded-full bg-[#C33235] p-4 shadow-lg">
+      <div className="rounded-full bg-[#edf2f8] p-4 shadow-lg">
         <Image
           src={heroImage}
           alt="Profile"
