@@ -77,7 +77,7 @@ export default function AboutMe() {
               </div>
               <div className="bg-white p-4 rounded-md border">
                 <p className="text-gray-500">Location</p>
-                <p className="mt-1 font-medium">Debre Birhan, Ethiopia</p>
+                <p className="mt-1 font-medium">Addis Abeba, Ethiopia</p>
               </div>
               <div className="bg-white p-4 rounded-md border">
                 <p className="text-gray-500">Follow</p>
