@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaTelegramPlane, FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../../public/maf.png';
+import logo from '../../public/Maf.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
