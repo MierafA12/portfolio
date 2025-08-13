@@ -94,7 +94,7 @@ export default function AboutMe() {
                   <Link href="mailto:mierafabebe12@gmail.com" title="Email">
                   <FaEnvelope/>
                   </Link>
-                  <Link href="" title="twitter">
+                  <Link href="https://x.com/mierafabebe" title="Twitter">
                   <FaTwitter/>
                   </Link>
                   <Link href="https://medium.com/@mierafabebe12" title="medium">
