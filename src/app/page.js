@@ -75,7 +75,7 @@ export default function Home() {
           <div className="text-[#C33235] text-2xl mb-1 flex justify-center">
             <FaProjectDiagram />
           </div>
-          <h3 className="text-xl font-bold text-gray-800">15+</h3>
+          <h3 className="text-xl font-bold text-gray-800">10+</h3>
           <p className="text-gray-600 text-sm">Projects</p>
         </div>
 
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="text-[#C33235] text-2xl mb-1 flex justify-center">
             <FaUsers />
           </div>
-          <h3 className="text-xl font-bold text-gray-800">10+</h3>
+          <h3 className="text-xl font-bold text-gray-800">6+</h3>
           <p className="text-gray-600 text-sm">Clients</p>
         </div>
       </div>
