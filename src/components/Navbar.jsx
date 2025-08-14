@@ -61,13 +61,13 @@ export default function Navbar() {
           <FaTelegramPlane className="text-lg" />
           Let's Talk
         </Link>
-         <button
+         {/* <button
           onClick={toggleDarkMode}
           className="w-10 h-10  flex items-center justify-center  dark:bg-gray-800 text-gray-800 dark:text-white hover:scale-105 transition"
           title="Toggle Dark Mode"
         >
           {isDarkMode ? '🌙' : '☀️'}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu Icon */}
