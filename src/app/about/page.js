@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { FaTelegramPlane, FaLinkedinIn, FaGithub , FaEnvelope ,FaTwitter , FaMedium } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Skills Images
 import htmlIcon from '../../../public/html.webp';
 import cssIcon from '../../../public/css.webp';
 import jsIcon from '../../../public/js.webp';
@@ -15,10 +18,13 @@ import gitIcon from '../../../public/git.webp';
 import flutterIcon from '../../../public/flutter.webp';
 import figmaIcon from '../../../public/figma.webp';
 import pythonIcon from '../../../public/python.webp';
+
+// Certificates Images
 import mern from '../../../public/mern.jpg';
-import udacity from '../../../public/udacity.png'
+import udacity from '../../../public/udacity.png';
 import flutter from '../../../public/UDAMY.jpg';
 import js from '../../../public/solo.png';
+
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState('about');
 
@@ -27,14 +33,14 @@ export default function AboutMe() {
       {/* Header Section */}
       <section className="text-center max-w-4xl mx-auto mb-12">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-          Explore The Creativity & More
+          Explore The Creativity &amp; More
         </h2>
         <p className="text-gray-700 leading-relaxed text-lg">
           Welcome to my digital space! I am{' '}
           <span className="text-[#C33235] font-semibold">Mieraf Abebe</span>, a
           Frontend Developer specializing in web and mobile apps using React,
-          Next.js, and React Native. I’m always open to new opportunities and
-          collaborations. Let’s build something extraordinary together!
+          Next.js, and React Native. I&apos;m always open to new opportunities and
+          collaborations. Let&apos;s build something extraordinary together!
         </p>
 
         {/* Tab Buttons */}
@@ -63,11 +69,11 @@ export default function AboutMe() {
               Personal Info
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              With experience as a frontend developer, I’ve developed and
+              With experience as a frontend developer, I&apos;ve developed and
               delivered user-friendly, fast, and accessible web and mobile
               interfaces. I enjoy turning ideas into real-world digital
-              products. Whether it’s building responsive UIs or solving complex
-              UI logic, I’m ready to tackle it!
+              products. Whether it&apos;s building responsive UIs or solving complex
+              UI logic, I&apos;m ready to tackle it!
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
@@ -92,13 +98,13 @@ export default function AboutMe() {
                     <FaGithub />
                   </Link>
                   <Link href="mailto:mierafabebe12@gmail.com" title="Email">
-                  <FaEnvelope/>
+                    <FaEnvelope/>
                   </Link>
                   <Link href="https://x.com/mierafabebe" title="Twitter">
-                  <FaTwitter/>
+                    <FaTwitter/>
                   </Link>
                   <Link href="https://medium.com/@mierafabebe12" title="medium">
-                  <FaMedium/>
+                    <FaMedium/>
                   </Link>
                 </div>
               </div>
@@ -129,9 +135,9 @@ export default function AboutMe() {
               </div>
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">
-                  MERN stack  Bootcamp
+                  MERN stack Bootcamp
                 </h4>
-                <p className="text-sm text-gray-500"> Training · 2024</p>
+                <p className="text-sm text-gray-500">Training · 2024</p>
               </div>
             </div>
           </div>
@@ -143,35 +149,35 @@ export default function AboutMe() {
             <h3 className="text-2xl font-bold mb-6 text-[#C33235]">Experience</h3>
             <div className="space-y-8">
               <div>
-                <h4 className="text-xl font-semibold text-gray-800">Full stack bootcamp|MERN</h4>
-                <p className="text-gray-600 text-sm mt-1">TechTonic tribe-2024</p>
+                <h4 className="text-xl font-semibold text-gray-800">Full stack bootcamp | MERN</h4>
+                <p className="text-gray-600 text-sm mt-1">TechTonic tribe - 2024</p>
                 <p className="mt-2 text-gray-700 leading-relaxed">
-                  Contributed to real-world full stack  projects using React and nodejs. Participated in weekly code reviews and agile standups.
+                  Contributed to real-world full stack projects using React and Node.js. Participated in weekly code reviews and agile standups.
                 </p>
-                 <a
-                href= "https://www.linkedin.com/company/techtonic-tribe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
-              >
-                see the campany →
-              </a>
+                <a
+                  href="https://www.linkedin.com/company/techtonic-tribe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+                >
+                  see the company →
+                </a>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-gray-800">Mobile app dev| Flutter</h4>
-                <p className="text-gray-600 text-sm mt-1">Kuraztech-2025</p>
+                <h4 className="text-xl font-semibold text-gray-800">Mobile app dev | Flutter</h4>
+                <p className="text-gray-600 text-sm mt-1">Kuraztech - 2025</p>
                 <p className="mt-2 text-gray-700 leading-relaxed">
-                 Worked with the mobile team to build cross-platform apps using Flutter, 
-                 contributing to real-world Tech projects with responsive UI and API integration. 
+                  Worked with the mobile team to build cross-platform apps using Flutter, 
+                  contributing to real-world Tech projects with responsive UI and API integration. 
                 </p>
-                 <a
-                href= "https://www.linkedin.com/company/kuraztech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
-              >
-                see the campany →
-              </a>
+                <a
+                  href="https://www.linkedin.com/company/kuraztech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm text-[#C33235] font-semibold hover:underline"
+                >
+                  see the company →
+                </a>
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">React Native Bootcamp</h4>
@@ -185,33 +191,35 @@ export default function AboutMe() {
         )}
 
         {/* CERTIFICATES TAB */}
-      {activeTab === 'certificates' && (
-  <section className="py-10 md:py-14">
-    <h3 className="text-2xl font-bold mb-6 text-[#C33235] text-center">Certificates</h3>
+        {activeTab === 'certificates' && (
+          <section className="py-10 md:py-14">
+            <h3 className="text-2xl font-bold mb-6 text-[#C33235] text-center">Certificates</h3>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
-      {[
-        { name: 'MERN stack ', img: mern },
-                { name: 'udacity|programming fundamentals', img: udacity },
-                { name: 'Flutter fundamentals', img: flutter },
-                { name: 'js practice', img: js },
-      ].map((cert, index) => (
-        <div key={index} className="text-center">
-          <div className="w-[120px] h-[90px] md:w-[140px] md:h-[100px] mx-auto">
-            <img
-              src={cert.img.src}
-              alt={cert.name}
-              className="w-full h-full object-contain rounded-md shadow-md hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <p className="mt-2 text-sm text-gray-700 font-medium">{cert.name}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-)}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+              {[
+                { name: 'MERN stack', img: mern },
+                { name: 'Udacity | Programming Fundamentals', img: udacity },
+                { name: 'Flutter Fundamentals', img: flutter },
+                { name: 'JS Practice', img: js },
+              ].map((cert, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-[120px] h-[90px] md:w-[140px] md:h-[100px] mx-auto">
+                    <Image
+                      src={cert.img}
+                      alt={cert.name}
+                      width={140}
+                      height={100}
+                      className="w-full h-full object-contain rounded-md shadow-md hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="mt-2 text-sm text-gray-700 font-medium">{cert.name}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+      </section>
 
-   </section>
       {/* SKILLS SECTION */}
       <h3 className="text-3xl font-bold text-center text-[#C33235] mt-10">Skills</h3>
       <section className="w-full bg-[#f9f8fe] py-10 overflow-hidden mt-10">
@@ -233,7 +241,7 @@ export default function AboutMe() {
             ].map((skill, idx) => (
               <div key={idx} className="flex flex-col items-center min-w-[100px]">
                 <div className="w-14 h-14 md:w-16 md:h-16 mb-2">
-                  <img src={skill.img.src} alt={skill.name} className="w-full h-full object-contain" />
+                  <Image src={skill.img} alt={skill.name} width={64} height={64} className="w-full h-full object-contain" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{skill.name}</span>
               </div>
