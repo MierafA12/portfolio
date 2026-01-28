@@ -21,6 +21,16 @@ export default function Projects() {
       experience: 'Led mobile-first UI and offline syncing, improved app structure and modular lesson design.',
     },
     {
+  image: EthioEvents,
+  title: 'EthioEvents Event Management System',
+  description:
+    'A web-based event management platform that enables users to discover events, register, and make payments, while allowing admins and super admins to manage events and monitor registrations.',
+  techStack: ['React', 'Tailwind CSS', 'PHP', 'MySQL', 'JWT'],
+  link: 'https://github.com/MierafA12/ethioevents-event-management',
+  experience:
+    'Built a role-based system with secure authentication, event management workflows, and responsive UI, gaining experience in full-stack development and access control.'
+},
+    {
       image: Lounge,
       title: 'Lounge Food Ordering Web',
       description:
@@ -28,7 +38,7 @@ export default function Projects() {
       techStack: ['React', 'Tailwind CSS', 'Express', 'MongoDB'],
       link: 'https://github.com/MierafA12/food-ordering-web',
       experience: 'Gained backend integration experience and worked on responsive component layouts.',
-    },
+    }, 
     {
       image: hemenhotel,
       title: 'Hemen Hotel Website',
