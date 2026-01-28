@@ -8,7 +8,7 @@ import quizapp from '../../../public/quizapp.png';
 import task from '../../../public/task.jpg';
 import hemenhotel from '../../../public/hemenhotel.png';
 import car from '../../../public/car.jpg';
-
+import EthioEvents from '../../../public/ethioevents.png';
 export default function Projects() {
   const projects = [
     {
@@ -26,7 +26,7 @@ export default function Projects() {
   description:
     'A web-based event management platform that enables users to discover events, register, and make payments, while allowing admins and super admins to manage events and monitor registrations.',
   techStack: ['React', 'Tailwind CSS', 'PHP', 'MySQL', 'JWT'],
-  link: 'https://github.com/MierafA12/ethioevents-event-management',
+  link: 'https://github.com/MierafA12/eventManegment',
   experience:
     'Built a role-based system with secure authentication, event management workflows, and responsive UI, gaining experience in full-stack development and access control.'
 },
