@@ -9,6 +9,7 @@ import task from '../../../public/task.jpg';
 import hemenhotel from '../../../public/hemenhotel.png';
 import car from '../../../public/car.jpg';
 import EthioEvents from '../../../public/ethioevents.png';
+import CryptoApp from '../../../public/Crypto.png';
 export default function Projects() {
   const projects = [
     {
@@ -29,6 +30,16 @@ export default function Projects() {
   link: 'https://github.com/MierafA12/eventManegment',
   experience:
     'Built a role-based system with secure authentication, event management workflows, and responsive UI, gaining experience in full-stack development and access control.'
+},
+{
+  image: CryptoApp,
+  title: 'CryptoTrack Cryptocurrency Management App',
+  description:
+    'A web-based cryptocurrency application that allows users to track crypto prices, manage portfolios, and view real-time market trends, while admins manage listed coins and platform settings.',
+  techStack: ['Flutter', 'Dart', 'Crypto API', 'Firebase'],
+  link: 'https://github.com/MierafA12/Cryptocurrency-Tracker-App',
+  experience:
+    'Developed real-time data integration, secure authentication, portfolio management features, and role-based access control, strengthening skills in APIs, security, and full-stack development.'
 },
     {
       image: Lounge,
