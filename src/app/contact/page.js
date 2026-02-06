@@ -62,115 +62,122 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-white px-6 py-10 mt-9">
-      {/* Left image */}
-      <div className=" hidden lg:block w-full md:w-1/2 mb-10 md:mb-0 md:pr-10  ">
-        <Image
-          src={Contactme}
-          alt="Contact image"
-          className="rounded-xl w-full h-auto"
-        />
-      </div>
-
-      {/* Right form */}
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="w-full max-w-lg space-y-5 md:pr-10"
-      >
-        <h2 className="text-3xl font-semibold mb-2 text-gray-800">Get in Touch</h2>
-
-        {successMessage && (
-          <div className="text-green-600 bg-green-100 border border-green-300 p-2 rounded-md transition duration-300">
-            {successMessage}
-          </div>
-        )}
-
-        {/* Full Name */}
-        <div>
-          <div className="flex items-center gap-2 border p-3 rounded-md">
-            <FaUser className="text-gray-500" />
-            <input
-              type="text"
-              name="fullname"
-              placeholder="Enter your full name"
-              className="w-full outline-none"
-              required
-              onChange={() => setErrors((prev) => ({ ...prev, fullname: "" }))}
-            />
-          </div>
+    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-12 lg:gap-20">
+        {/* Left image */}
+        <div className=" hidden lg:block w-full md:w-1/2 mb-10 md:mb-0 md:pr-10  ">
+          <Image
+            src={Contactme}
+            alt="Contact image"
+            className="rounded-xl w-full h-auto"
+          />
         </div>
 
-        {/* Email */}
-        <div>
-          <div className="flex items-center gap-2 border p-3 rounded-md">
-            <FaEnvelope className="text-gray-500" />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              className="w-full outline-none"
-              required
-              onChange={() => setErrors((prev) => ({ ...prev, email: "" }))}
-            />
-          </div>
-        </div>
-
-        {/* Phone */}
-        <div>
-          <div className="flex items-center gap-2 border p-3 rounded-md">
-            <FaPhone className="text-gray-500" />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="e.g. +251912345678 or 0912345678"
-              className="w-full outline-none"
-              required
-              onChange={() => setErrors((prev) => ({ ...prev, phone: "" }))}
-            />
-          </div>
-          {errors.phone && (
-            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-          )}
-        </div>
-
-        {/* Subject */}
-        <div>
-          <div className="flex items-center gap-2 border p-3 rounded-md">
-            <MdSubject className="text-gray-500" />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              className="w-full outline-none"
-              onChange={() => setErrors((prev) => ({ ...prev, subject: "" }))}
-            />
-          </div>
-        </div>
-
-        {/* Message */}
-        <div>
-          <div className="flex items-start gap-2 border p-3 rounded-md">
-            <FaRegCommentDots className="mt-1 text-gray-500" />
-            <textarea
-              name="message"
-              placeholder="Don't be afraid to talk with me — I’m here to help!"
-              rows="4"
-              className="w-full outline-none resize-none"
-              required
-              onChange={() => setErrors((prev) => ({ ...prev, message: "" }))}
-            />
-          </div>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md transition duration-200"
+        {/* Right form */}
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-full max-w-lg space-y-5 md:pr-10"
         >
-          Get in Touch
-        </button>
-      </form>
-    </div>
+          <div className="mb-6">
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+              Get in <span className="text-[#C33235]">Touch</span>
+            </h2>
+            <div className="h-1 w-12 bg-[#C33235] mt-2 rounded-full" />
+          </div>
+
+          {successMessage && (
+            <div className="text-green-600 bg-green-100 border border-green-300 p-2 rounded-md transition duration-300">
+              {successMessage}
+            </div>
+          )}
+
+          {/* Full Name */}
+          <div>
+            <div className="flex items-center gap-2 border p-3 rounded-md">
+              <FaUser className="text-gray-500" />
+              <input
+                type="text"
+                name="fullname"
+                placeholder="Enter your full name"
+                className="w-full outline-none"
+                required
+                onChange={() => setErrors((prev) => ({ ...prev, fullname: "" }))}
+              />
+            </div>
+          </div>
+
+          {/* Email */}
+          <div>
+            <div className="flex items-center gap-2 border p-3 rounded-md">
+              <FaEnvelope className="text-gray-500" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="w-full outline-none"
+                required
+                onChange={() => setErrors((prev) => ({ ...prev, email: "" }))}
+              />
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div>
+            <div className="flex items-center gap-2 border p-3 rounded-md">
+              <FaPhone className="text-gray-500" />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="e.g. +251912345678 or 0912345678"
+                className="w-full outline-none"
+                required
+                onChange={() => setErrors((prev) => ({ ...prev, phone: "" }))}
+              />
+            </div>
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+            )}
+          </div>
+
+          {/* Subject */}
+          <div>
+            <div className="flex items-center gap-2 border p-3 rounded-md">
+              <MdSubject className="text-gray-500" />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                className="w-full outline-none"
+                onChange={() => setErrors((prev) => ({ ...prev, subject: "" }))}
+              />
+            </div>
+          </div>
+
+          {/* Message */}
+          <div>
+            <div className="flex items-start gap-2 border p-3 rounded-md">
+              <FaRegCommentDots className="mt-1 text-gray-500" />
+              <textarea
+                name="message"
+                placeholder="Don't be afraid to talk with me — I’m here to help!"
+                rows="4"
+                className="w-full outline-none resize-none"
+                required
+                onChange={() => setErrors((prev) => ({ ...prev, message: "" }))}
+              />
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="bg-[#C33235] text-white px-8 py-3 rounded-full font-black text-xs tracking-widest uppercase hover:bg-black transition-all duration-300"
+          >
+            Get in Touch
+          </button>
+        </form>
+      </div>
+    </div >
   );
 }
