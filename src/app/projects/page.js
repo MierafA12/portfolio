@@ -120,7 +120,7 @@ export default function Projects() {
       description:
         'A comprehensive offline-supported mobile application designed to bridge the gap in learning Ethiopian local languages. It features interactive lessons, progress tracking, and localized UI/UX for an intuitive educational experience.',
       techStack: ['React Native', 'SQLite', 'Node.js', 'MongoDB'],
-      link: 'https://github.com/Hailemeskel-Getaneh/EthioLingo',
+      link: 'https://github.com/MierafA12/EthioLingo',
       experience: 'Engineered a robust offline-first synchronization engine and optimized mobile UI performance.',
     },
     {
@@ -150,7 +150,7 @@ export default function Projects() {
 },
     {
       image: CryptoApp,
-      title: 'CryptoTrack – Market Intel',
+      title: 'CryptoTrack – Market',
       description:
         'A high-performance cryptocurrency tracker providing real-time market data, portfolio management, and trend analysis. Built with Flutter for a sleek, cross-platform experience with Firebase integration.',
       techStack: ['Flutter', 'Dart', 'Crypto API', 'Firebase'],
@@ -195,7 +195,7 @@ export default function Projects() {
     },
     {
       image: car,
-      title: 'CarRent – Fleet Solutions',
+      title: 'CarRent ',
       description:
         'A local car rental solution featuring a user-friendly booking workflow and fleet management. It simplifies the transition from browsing to booking on mobile devices.',
       techStack: ['React Native', 'AsyncStorage'],
@@ -206,7 +206,6 @@ export default function Projects() {
 
   return (
     <section className="relative py-32 px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
-      {/* Background Accents */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-red-50/50 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50/30 blur-[100px] rounded-full -z-10" />
 
