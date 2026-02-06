@@ -11,6 +11,8 @@ import hemenhotel from '../../../public/hemenhotel.png';
 import car from '../../../public/car.jpg';
 import EthioEvents from '../../../public/ethioevents.png';
 import CryptoApp from '../../../public/Crypto.png';
+import schoolDashboard from '../../../public/school.png';
+
 const ProjectCard = ({ project, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const words = project.description.split(' ');
@@ -94,7 +96,6 @@ const ProjectCard = ({ project, index }) => {
               </p>
             </div>
           </div>
-
           <div className="pt-6">
             <a
               href={project.link}
@@ -132,6 +133,21 @@ export default function Projects() {
       experience:
         'Architected a scalable permissions system and integrated secure payment workflows for end-to-users.'
     },
+    {
+  image: schoolDashboard,
+  title: 'School Analytics Dashboard ',
+  description:
+    'A view-only mobile analytics dashboard built for government officials to monitor and analyze school data across regions. The app provides access to school profiles, license documents, subscription status, demographic insights, and visual analytics through an intuitive and secure interface.',
+  techStack: [
+    'Flutter',
+    'Dart',
+    'laravel',
+    'my-sql',
+  ],
+  link: 'https://github.com/MierafA12/school-analytics-dashboard-mobile',
+  experience:
+    'Designed a clean, data-driven dashboard experience with advanced filtering, visual charts, dark mode support, and secure read-only access for government stakeholders.',
+},
     {
       image: CryptoApp,
       title: 'CryptoTrack – Market Intel',
