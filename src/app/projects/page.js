@@ -12,6 +12,8 @@ import car from '../../../public/car.jpg';
 import EthioEvents from '../../../public/ethioevents.png';
 import CryptoApp from '../../../public/Crypto.png';
 import schoolDashboard from '../../../public/school.png';
+import Reunite from '../../../public/reunite.png';
+
 
 const ProjectCard = ({ project, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -122,6 +124,15 @@ export default function Projects() {
       techStack: ['React Native', 'SQLite', 'Node.js', 'MongoDB'],
       link: 'https://github.com/MierafA12/EthioLingo',
       experience: 'Engineered a robust offline-first synchronization engine and optimized mobile UI performance.',
+    },
+    {
+      image: Reunite,
+      title: 'Reunite – Community Reconnection',
+      description:
+        'A social-impact oriented platform designed to help reunite separated families and community members. It features a high-performance React Native mobile app and a robust Laravel backend, ensuring secure data handling and real-time communication.',
+      techStack: ['Laravel', 'React Native', 'PHP', 'MySQL', 'Firebase'],
+      link: 'https://github.com/MierafA12/Reunite',
+      experience: 'Architected the cross-platform mobile interface and integrated secure cloud-based data synchronization flows.',
     },
     {
       image: EthioEvents,
